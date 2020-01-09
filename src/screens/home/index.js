@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+
+import { Containers } from '../../styles';
 
 export default class Home extends Component {
   render() {
     return(
-      <View>
-        <Text>Você está na Home</Text>
+      <View style={styles.container}>
+        <Text>Bem vindo a tela Home </Text>
       </View>
     );
   }
 };
 
-const styles = StyleSheet.create({
+const container = Containers.centeredContainer;
 
+const styles = StyleSheet.create({
+  container,
 });

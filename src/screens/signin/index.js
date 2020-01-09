@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import { centeredContainer } from '../../styles/containers';
-import { DefaultStatusBar } from '../../components/atoms';
+import { Containers } from '../../styles';
+import { DefaultStatusBar, DefaultButton } from '../../components/atoms';
 
 export default class SignIn extends Component {
+
+  constructor(props) {
+    super(props);
+  };
+  
   render() {
     return(
-      <View style={styles.centeredContainer}>
+      <View style={styles.container}>
 
         <DefaultStatusBar
           animated={true}
@@ -38,18 +43,35 @@ export default class SignIn extends Component {
           react-navigation: ^4.0.10 {"\n"}
           react-navigation-stack: ^2.0.13 {"\n"}
           react-navigation-tabs: ^2.7.0 {"\n"}
+          react-native-elements: ^1.2.7 {"\n"}
         </Text>
+
+        <DefaultButton
+          title='Clique Aqui'
+          color='#76af7c' 
+          disabled={false}
+          onPress={this.navigateToHome}/>
 
       </View>
     );
   }
+
+  navigateToHome = () => {
+    this.props.navigation.navigate('Home');
+    console.log('Apertou o botão essa mizera !');
+  };
+
 };
 
+const container = Containers.centeredContainer;
+
 const styles =  StyleSheet.create({
-  centeredContainer,
+  container,
+
   description: {
     textAlign: 'center'
   },
+
   image: {
     width: 100,
     height: 100

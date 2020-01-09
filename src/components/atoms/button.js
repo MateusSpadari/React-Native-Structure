@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, View } from 'react-native';
 
-const DefaultButton = ({title, color, disabled, ...rest}) => (
-  <View>
-    <Button
-      {...rest}
-      title={title}
-      color={color}
-      disabled={disabled}
-    />
-  </View>
-);
+export default class DefaultButton extends Component {
 
-export default DefaultButton;
+  constructor(props) {
+    super(props);
+  };
+
+  render() {
+    return(
+      <View>
+        
+        <Button
+          title={this.props.title}
+          color={this.props.color}
+          disabled={this.disabled}
+          onPress={this.props.onPress}/>
+          
+      </View>
+    ); 
+  }
+};

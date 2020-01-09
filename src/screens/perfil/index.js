@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 import { Containers } from '../../styles'; 
 
-export default class About extends Component {
+export default class Perfil extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text>Você está na tela de About</Text>
+        <Text>Bem vindo a tela de Perfil</Text>
       </View>
     );
   }
