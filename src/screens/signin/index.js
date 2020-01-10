@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';  
 
 import { Containers } from '../../styles';
 import { DefaultStatusBar, DefaultButton } from '../../components/atoms';
@@ -8,6 +9,10 @@ export default class SignIn extends Component {
 
   constructor(props) {
     super(props);
+  };
+
+  componentDidMount = () => {
+    SplashScreen.hide();
   };
   
   render() {
