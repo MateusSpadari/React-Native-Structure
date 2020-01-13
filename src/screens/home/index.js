@@ -2,14 +2,20 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 import { Containers } from '../../styles';
+import { DefaultCard } from '../../components/atoms';
 
 export default class Home extends Component {
   render() {
     return(
-      <View style={styles.page}>
-        <View style={styles.container}>
-          <Text>Bem vindo a tela Home </Text>
-        </View>
+      <View style={styles.container}>
+
+        <Text>Exemplo de Card customizável</Text>
+
+          <DefaultCard
+            title='React Native Rocks' 
+            description='Esse é um exemplo de um Card que pode ser reutilizado'
+            buttonTitle='Selecionar' />
+            
       </View>
     );
   }
@@ -19,9 +25,4 @@ const container = Containers.centeredContainer;
 
 const styles = StyleSheet.create({
   container,
-  page: {
-    backgroundColor: '#ffffff',
-    width: '100%',
-    height: '100%'
-  }
 });

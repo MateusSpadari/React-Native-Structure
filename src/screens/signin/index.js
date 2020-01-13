@@ -49,13 +49,14 @@ export default class SignIn extends Component {
           react-navigation-stack: ^2.0.13 {"\n"}
           react-navigation-tabs: ^2.7.0 {"\n"}
           react-native-elements: ^1.2.7 {"\n"}
+          react-native-vector-icons: ^6.6.0 {"\n"}
         </Text>
 
         <DefaultButton
           title='Clique Aqui'
           color='#76af7c' 
           disabled={false}
-          onPress={this.navigateToHome}/>
+          onPress={this.navigateToHome} />
 
       </View>
     );
@@ -63,7 +64,6 @@ export default class SignIn extends Component {
 
   navigateToHome = () => {
     this.props.navigation.navigate('Home');
-    console.log('Apertou o botão essa mizera !');
   };
 
 };

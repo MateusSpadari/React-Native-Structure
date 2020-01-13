@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import { Containers } from '../../styles'; 
+import { Containers } from '../../styles';
+import { DefaultToolTip } from '../../components/atoms';
 
 export default class About extends Component {
   render() {
     return(
       <View style={styles.container}>
-        <Text>Você está na tela de About</Text>
+
+        <DefaultToolTip 
+          height={70}
+          tip='Deixe aqui uma dica para seu usuário, legal não ?'
+          myText='Clique aqui !'
+          highlightColor='#f1c40f'/>
+
       </View>
     );
   }
