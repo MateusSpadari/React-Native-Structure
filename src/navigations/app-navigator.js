@@ -1,15 +1,16 @@
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-// import { Icon } from 'react-native-elements'
 
 import Home from '../screens/home';
 import About from '../screens/about';
 import Perfil from '../screens/perfil';
+import Form from '../screens/form';
 
 const tabNavigatorConfig = {
   initialRouteName: 'Home',
   header: null,
   headerMode: 'none',
   tabBarOptions: {
+    showIcon: true,
     activeTintColor: '#2980b9',
     inactiveTintColor: '#bdc3c7',
     labelStyle: {
@@ -21,22 +22,15 @@ const tabNavigatorConfig = {
 const RouteConfigs = {
   Home: {
     screen: Home,
-    // For using icons on tab navigations enable this
-    // navigationOptions: () => ({
-    //   tabBarIcon: () => (
-    //     <Icon
-    //       name='ios-american-football'
-    //       type='ionicon'
-    //       color='#517fa4'
-    //     />
-    //   )
-    // })
   },
   About: {
     screen: About
   },
   Perfil: {
     screen: Perfil
+  },
+  Form: {
+    screen: Form
   }
 };
 

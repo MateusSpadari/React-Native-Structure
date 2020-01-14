@@ -5,6 +5,7 @@ import DefaultCard from './card';
 import DefaultToolTip from './tooltip';
 import DefaultBadge from './badge';
 import DefaultAvatar from './avatar';
+import DefaultError from './error';
 
 export { 
   DefaultButton, 
@@ -13,5 +14,6 @@ export {
   DefaultCard,
   DefaultToolTip,
   DefaultBadge,
-  DefaultAvatar
+  DefaultAvatar,
+  DefaultError
 };

@@ -1,18 +1,39 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { TextInput, StyleSheet } from 'react-native';
 
-const DefaultInput = ({autoCapitalize, autoCorrect, editable, keyboardType, maxLength, placeholder, ...rest}) => (
-  <View>
-    <TextInput 
-      {...rest}
-      autoCapitalize={autoCapitalize}
-      autoCorrect={autoCorrect}
-      editable={editable}
-      keyboardType={keyboardType}
-      maxLength={maxLength}
-      placeholder={placeholder}
-    />
-  </View>
+import { Input } from '../../styles';
+
+const DefaultInput = (
+  {
+    autoCapitalize, 
+    autoCorrect, 
+    editable, 
+    keyboardType, 
+    maxLength, 
+    placeholder, 
+    name, 
+    secureTextEntry, 
+    ...rest
+  }) => (
+    
+  <TextInput 
+    {...rest}
+    secureTextEntry={secureTextEntry}
+    name={name}
+    style={styles.input}
+    autoCapitalize={autoCapitalize}
+    autoCorrect={autoCorrect}
+    editable={editable}
+    keyboardType={keyboardType}
+    maxLength={maxLength}
+    placeholder={placeholder} />
+    
 );
+
+const input = Input.customInput;
+
+const styles = StyleSheet.create({
+  input
+});
 
 export default DefaultInput;

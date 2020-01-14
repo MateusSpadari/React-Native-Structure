@@ -15,12 +15,12 @@ api.addResponseTransform(response => {
   }
 });
 
-api.addRequestTransform(request => {
-  const token = await AsyncStorage.getItem('@api:token');
-  if (token) {
-    request.headers.Authorization = `Bearer ${token}`;
-  }
-});
+// api.addRequestTransform(request => {
+//   const token = await AsyncStorage.getItem('@api:token');
+//   if (token) {
+//     request.headers.Authorization = `Bearer ${token}`;
+//   }
+// });
 
 
 

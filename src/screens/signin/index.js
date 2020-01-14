@@ -50,6 +50,9 @@ export default class SignIn extends Component {
           react-navigation-tabs: ^2.7.0 {"\n"}
           react-native-elements: ^1.2.7 {"\n"}
           react-native-vector-icons: ^6.6.0 {"\n"}
+          react-native-formik: ^1.7.7 {"\n"}
+          react-native-vector-icons: ^6.6.0 {"\n"}
+          yup: ^0.28.0 {"\n"}
         </Text>
 
         <DefaultButton
@@ -57,7 +60,7 @@ export default class SignIn extends Component {
           color='#76af7c' 
           disabled={false}
           onPress={this.navigateToHome} />
-
+          
       </View>
     );
   }
