@@ -18,7 +18,7 @@
 
 > $ npm install
 
-*Execute a aplicação no Android ou no Ios*
+*Execute a aplicação no Android ou no IOS*
 
 > $ react-native run-android / react-native run-ios
 
